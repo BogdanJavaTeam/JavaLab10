@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.bntu.fitr.povt.bogdan.lab10.controller;
+package by.bntu.fitr.povt.bogdan.lab10.model.util;
 
 import java.util.Scanner;
 

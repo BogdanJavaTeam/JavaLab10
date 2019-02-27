@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.bntu.fitr.povt.bogdan.lab10.model;
+package by.bntu.fitr.povt.bogdan.lab10.model.logic;
 
-import by.bntu.fitr.povt.bogdan.lab10.controller.Request;
+import by.bntu.fitr.povt.bogdan.lab10.model.util.Request;
+import by.bntu.fitr.povt.bogdan.lab10.model.logic.Classes_Methods;
 import java.util.List;
 
 public class Item {
@@ -66,7 +67,7 @@ public class Item {
                 this.category);
     }
     
-    void title() {
+    void ToString() {
         System.out.println(
                 "ID" + BORDER +
                 "COUNT" + BORDER +

@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.bntu.fitr.povt.bogdan.lab10.model;
+package by.bntu.fitr.povt.bogdan.lab10.model.logic;
 
-import static by.bntu.fitr.povt.bogdan.lab10.model.Classes_Methods.clientdel;
-import static by.bntu.fitr.povt.bogdan.lab10.model.Classes_Methods.itemdel;
-import static by.bntu.fitr.povt.bogdan.lab10.model.Classes_Methods.orderdel;
-import static by.bntu.fitr.povt.bogdan.lab10.view.Lab10.clients;
-import static by.bntu.fitr.povt.bogdan.lab10.view.Lab10.items;
-import static by.bntu.fitr.povt.bogdan.lab10.view.Lab10.orders;
+import by.bntu.fitr.povt.bogdan.lab10.model.logic.Client;
+import by.bntu.fitr.povt.bogdan.lab10.model.logic.Item;
+import by.bntu.fitr.povt.bogdan.lab10.model.logic.Order;
+import static by.bntu.fitr.povt.bogdan.lab10.model.logic.Classes_Methods.clientdel;
+import static by.bntu.fitr.povt.bogdan.lab10.model.logic.Classes_Methods.itemdel;
+import static by.bntu.fitr.povt.bogdan.lab10.model.logic.Classes_Methods.orderdel;
+import static by.bntu.fitr.povt.bogdan.lab10.controller.Lab10.clients;
+import static by.bntu.fitr.povt.bogdan.lab10.controller.Lab10.items;
+import static by.bntu.fitr.povt.bogdan.lab10.controller.Lab10.orders;
 
 public class Menu {
     private static final String ERROR_ORDER = "Orders list is empty!";
@@ -25,7 +28,7 @@ public class Menu {
             case 1 :
                 try {
                     length = orders.size();
-                    orders.get(0).title();
+                    orders.get(0).ToString();
                     for (int i = 0; i < length; i++)
                         orders.get(i).about();
                 } catch (Exception err) {
@@ -35,7 +38,7 @@ public class Menu {
             case 2 :
                 try {
                     length = clients.size();
-                    clients.get(0).title();
+                    clients.get(0).ToString();
                     for (int i = 0; i < length; i++)
                         clients.get(i).about();
                 } catch (Exception err) {
@@ -45,7 +48,7 @@ public class Menu {
             case 3 :
                 try {
                     length = items.size();
-                    items.get(0).title();
+                    items.get(0).ToString();
                     for (int i = 0; i < length; i++)
                         items.get(i).about();
                 } catch (Exception err) {

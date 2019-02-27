@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.bntu.fitr.povt.bogdan.lab10.model;
+package by.bntu.fitr.povt.bogdan.lab10.model.logic;
 
-import by.bntu.fitr.povt.bogdan.lab10.controller.Request;
-import static by.bntu.fitr.povt.bogdan.lab10.view.Lab10.clients;
-import static by.bntu.fitr.povt.bogdan.lab10.view.Lab10.items;
-import static by.bntu.fitr.povt.bogdan.lab10.view.Lab10.orders;
+import by.bntu.fitr.povt.bogdan.lab10.model.util.Request;
+import static by.bntu.fitr.povt.bogdan.lab10.controller.Lab10.clients;
+import static by.bntu.fitr.povt.bogdan.lab10.controller.Lab10.items;
+import static by.bntu.fitr.povt.bogdan.lab10.controller.Lab10.orders;
 import java.util.List;
 
 public class Classes_Methods {

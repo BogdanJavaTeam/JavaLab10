@@ -3,16 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package by.bntu.fitr.povt.bogdan.lab10.model;
+package by.bntu.fitr.povt.bogdan.lab10.model.logic;
 
-import by.bntu.fitr.povt.bogdan.lab10.controller.Request;
+import by.bntu.fitr.povt.bogdan.lab10.model.util.Request;
+import by.bntu.fitr.povt.bogdan.lab10.model.logic.Classes_Methods;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Roule
- */
 public class Order {
     private boolean status = false;
     private int id;
@@ -87,7 +84,7 @@ public class Order {
         }   
     }
     
-    void title() {
+    void ToString() {
         System.out.println(
                 "ID" + BORDER + 
                 "CLIENT" + BORDER + 
