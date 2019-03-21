@@ -6,6 +6,15 @@
 package by.bntu.fitr.povt.bogdan.lab10.view;
 
 public class Printer {
+
+    public static void println(Object obj) {
+        System.out.println(obj.toString());
+    }
+
+    public static void print(Object obj) {
+        System.out.print(obj.toString());
+    }
+
     public static void printmenu() {
         System.out.println("\n1 | Show active orders");
         System.out.println("2 | Show customers list");
