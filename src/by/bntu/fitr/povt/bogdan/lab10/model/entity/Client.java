@@ -16,16 +16,41 @@ public class Client {
     private static final String ID_YET = "This ID already yet in base!\n";
     private static final String ID_REQUEST = "ID : ";
     private static final String BORDER = "\t|\t";
-    
+
     /* FIELDS */
-    private int id;
-    private int count;
-    private String name;
+    private int id; // ID
+    private int count; // Count of orders
+    private String name; 
     private String adress;
     private String phone;
 
-    /* GET & SET */
+    /* CONSTRUCTOR */
+    public Client() {
+        this.id = Request.getint(ID_REQUEST, 0);
+        this.count = Request.getint("ORDERS COUNT : ", 0);
+        this.name = Request.getstr("NAME : ");
+        this.adress = Request.getstr("ADRESS : ");
+        this.phone = Request.getstr("PHONE : ");
+    }
 
+    public Client(List<Client> array) {
+        this();
+        while (Classes_Methods.findClient(array, this.id)) {
+            Printer.println(ID_YET);
+            this.id = Request.getint(ID_REQUEST, 0);
+        }
+
+    }
+    
+    public Client(Client client){
+        this.id = client.id;
+        this.count = client.count;
+        this.name = client.name;
+        this.adress = client.adress;
+        this.phone = client.phone;
+    }
+
+    /* GET & SET */
     public int getId() {
         return id;
     }
@@ -66,24 +91,6 @@ public class Client {
         this.phone = phone;
     }
 
-    /* CONSTRUCTOR */
-    public Client() {
-        this.id = Request.getint(ID_REQUEST, 0);
-        this.count = Request.getint("ORDERS COUNT : ", 0);
-        this.name = Request.getstr("NAME : ");
-        this.adress = Request.getstr("ADRESS : ");
-        this.phone = Request.getstr("PHONE : ");
-    }
-
-    public Client(List<Client> array) {
-        this();
-        while (Classes_Methods.findClient(array, this.id)) {
-            Printer.println(ID_YET);
-            this.id = Request.getint(ID_REQUEST, 0);
-        }
-
-    }
-
     /* INCTEMENT ORDERS COUNT */
     void incr() {
         this.count++;
@@ -100,19 +107,18 @@ public class Client {
 
     /* PRINT INFORMATION ABOUT CLIENT */
     public void about() {
-        Printer.println(
-                this.id + BORDER
-                + this.count + BORDER
-                + this.name + BORDER
-                + this.adress + BORDER
-                + this.phone);
+        Printer.println("ID" + BORDER + "ORDERS COUNT" + BORDER
+                + "NAME" + BORDER + "ADRESS" + BORDER
+                + "PHONE");
     }
 
     @Override
     public String toString() {
-        return "ID" + BORDER + "ORDERS COUNT" + BORDER
-                + "NAME" + BORDER + "ADRESS" + BORDER
-                + "PHONE";
+        return this.id + BORDER
+                + this.count + BORDER
+                + this.name + BORDER
+                + this.adress + BORDER
+                + this.phone;
     }
 
 }

@@ -31,9 +31,9 @@ public class Menu {
             case 1:
                 try {
                     length = orders.size();
-                    Printer.println(orders.get(0).toString());
+                    orders.get(0).about();
                     for (int i = 0; i < length; i++) {
-                        orders.get(i).about();
+                        Printer.println(orders.get(i).toString());
                     }
                 } catch (Exception err) {
                     Printer.println(ERROR_ORDER);
@@ -42,9 +42,9 @@ public class Menu {
             case 2:
                 try {
                     length = clients.size();
-                    Printer.println(clients.get(0).toString());
+                    clients.get(0).about();
                     for (int i = 0; i < length; i++) {
-                        clients.get(i).about();
+                        Printer.println(clients.get(i).toString());
                     }
                 } catch (Exception err) {
                     Printer.println(ERROR_CLIENTS);
@@ -53,9 +53,9 @@ public class Menu {
             case 3:
                 try {
                     length = items.size();
-                    Printer.println(items.get(0).toString());
+                    items.get(0).about();
                     for (int i = 0; i < length; i++) {
-                        items.get(i).about();
+                        Printer.println(items.get(i).toString());
                     }
                 } catch (Exception err) {
                     Printer.println(ERROR_ITEMS);

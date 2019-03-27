@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Study/4sem/OOP/JavaLab10/src/by/bntu/fitr/povt/bogdan/lab10/model/entity/Client.java</file>
+            <file>file:/D:/Study/4sem/OOP/JavaLab10/src/by/bntu/fitr/povt/bogdan/lab10/model/util/Request.java</file>
+            <file>file:/D:/Study/4sem/OOP/JavaLab10/src/by/bntu/fitr/povt/bogdan/lab10/model/logic/Classes_Methods.java</file>
+            <file>file:/D:/Study/4sem/OOP/JavaLab10/src/by/bntu/fitr/povt/bogdan/lab10/model/entity/Order.java</file>
+            <file>file:/D:/Study/4sem/OOP/JavaLab10/src/by/bntu/fitr/povt/bogdan/lab10/model/entity/Item.java</file>
+            <file>file:/D:/Study/4sem/OOP/JavaLab10/src/by/bntu/fitr/povt/bogdan/lab10/model/logic/Menu.java</file>
+        </group>
     </open-files>
 </project-private>

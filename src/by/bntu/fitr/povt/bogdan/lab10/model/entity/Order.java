@@ -11,8 +11,6 @@ import by.bntu.fitr.povt.bogdan.lab10.view.Printer;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class Order {
 
     /* OUTPUT MESSAGE LIST */
@@ -23,55 +21,13 @@ public class Order {
     private static final String CLIENT_REQUEST = "Client ID : ";
     private static final String BORDER = "\t|\t";
     private static final String ERROR_OBJ = "Wrong object. Delete from base.";
-    
+
     /* FIELDS */
-    private boolean status = false;
+    private boolean status = false; // Order completion
     private int id;
     private int clientid;
     private float sum = 0.0f;
     private List<Item> items = new ArrayList<>();
-
-    /* GET & SET */
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getClientid() {
-        return clientid;
-    }
-
-    public void setClientid(int clientid) {
-        this.clientid = clientid;
-    }
-
-    public float getSum() {
-        return sum;
-    }
-
-    public void setSum(float sum) {
-        this.sum = sum;
-    }
-
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
 
     /* CONSTRUCTOR */
     public Order() {
@@ -115,24 +71,68 @@ public class Order {
         }
     }
 
+    public Order(Order order) {
+        this.status = order.status;
+        this.id = order.id;
+        this.clientid = order.clientid;
+        this.sum = order.sum;
+        for(Item item : order.items) this.items.add(new Item(item));
+    }
+
+    /* GET & SET */
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getClientid() {
+        return clientid;
+    }
+
+    public void setClientid(int clientid) {
+        this.clientid = clientid;
+    }
+
+    public float getSum() {
+        return sum;
+    }
+
+    public void setSum(float sum) {
+        this.sum = sum;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
     /* PRINT METHODS */
     public void about() {
-        try {
-            Printer.println(
-                    this.id + BORDER
-                    + this.clientid + BORDER
-                    + this.sum + BORDER
-                    + this.items.size() + BORDER
-                    + this.status);
-        } catch (Exception err) {
-            Printer.println(ERROR_OBJ);
-        }
+        Printer.println("ID" + BORDER + "CLIENT" + BORDER
+                + "SUM $" + BORDER + "ITEMS" + BORDER
+                + "STATUS");
     }
 
     @Override
     public String toString() {
-        return "ID" + BORDER + "CLIENT" + BORDER
-                + "SUM $" + BORDER + "ITEMS" + BORDER
-                + "STATUS";
+        return this.id + BORDER
+                + this.clientid + BORDER
+                + this.sum + BORDER
+                + this.items.size() + BORDER
+                + this.status;
     }
 }
